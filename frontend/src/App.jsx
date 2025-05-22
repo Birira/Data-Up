@@ -1,11 +1,15 @@
-import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Navi } from './Components/Navi';
 
 function App() {
 
   return (
     <div>
-      <Navi />
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Navi/>}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 };
